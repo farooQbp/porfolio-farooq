@@ -9,6 +9,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import useLocalStorage from 'use-local-storage'
+import TabTitleChanger from './utils/tabtitlechanger';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                 {/* <Testimonials /> */}
                 <Contact theme={theme} />
             </main>
+            <TabTitleChanger />
         </div>
     );
 }

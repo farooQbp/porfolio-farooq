@@ -1,3 +1,7 @@
+
+import { useEffect, useState } from 'react';
+import useLocalStorage from 'use-local-storage';
+
 import './App.css';
 
 import Sidebar from './components/sidebar/Sidebar';
@@ -6,13 +10,30 @@ import About from './components/about/About';
 import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
-import useLocalStorage from 'use-local-storage'
 import TabTitleChanger from './utils/tabtitlechanger';
+import Academics from './components/academics/Academics';
 
 
 function App() {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+    const [data, setData] = useState({
+        resumeName: '',
+        academics: [],
+        projects: [],
+        workExperience: [],
+    });
+
+    const fetchData = async () => {
+        await fetch("/configs/appConfigs.json")
+            .then((res) => res.json())
+            .then((data) => setData(data))
+            .catch(() => window.location.reload());
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, []);
 
     const switchTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -24,10 +45,11 @@ function App() {
             <Sidebar theme={theme} switchTheme={switchTheme} />
             <main className='main'>
                 <Home />
-                <About />
+                <About resume={data.resumeName} />
+                <Resume workExperience={data.workExperience} />
+                <Portfolio projects={data.projects} />
+                <Academics academics={data.academics} />
                 {/* <Services /> */}
-                <Portfolio />
-                <Resume />
                 {/* <Testimonials /> */}
                 <Contact theme={theme} />
             </main>

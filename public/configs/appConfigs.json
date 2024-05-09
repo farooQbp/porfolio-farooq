@@ -1,0 +1,76 @@
+{
+    "resumeName": "farooq_basheer.pdf",
+    "academics": [
+        {
+            "id": 1,
+            "title": "B.Tech",
+            "subtitle": "Mechanical Engineering",
+            "institute": "TocH Institute of Science and Technology Ernakulam",
+            "information": [
+                "Under APJ Abdul Kalam Technological University Kerala"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Plus Two",
+            "subtitle": "",
+            "institute": "Government Higher Secondary School Peruva",
+            "information": []
+        },
+        {
+            "id": 3,
+            "title": "10th",
+            "subtitle": "",
+            "institute": "St Mary's High School Vallakom",
+            "information": []
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "image": "https://www.denofgeek.com/wp-content/uploads/2022/05/Leged-of-Zelda-Link.jpg",
+            "title": "React Native App",
+            "category": ["React Native", "Material UI", "Mobx"],
+            "url":"https://play.google.com/store/apps/details?id=com.ktuassist.mech",
+            "repositoryUrl": "#"
+        },
+        {
+            "id": 2,
+            "image": "https://www.denofgeek.com/wp-content/uploads/2022/05/Leged-of-Zelda-Link.jpg",
+            "title": "Cafe Management System",
+            "category": ["React JS", "Orcale Database", "Mongo DB", "Python", "MobX"],
+            "url": "#",
+            "repositoryUrl": "https://github.com/farooQbp/cafe-management-system"
+        },
+        {
+            "id": 3,
+            "image": "https://github.com/farooQbp/porfolio-farooq/raw/master/src/assets/screenshot.png",
+            "title": "Personal PortFolio",
+            "category": ["React JS","CSS"],
+            "url": "https://farooqbasheer.in",
+            "repositoryUrl": "https://github.com/farooQbp/porfolio-farooq"
+        }
+    ],
+    "workExperience": [
+        {
+            "id": 1,
+            "title": "Software Engineer",
+            "company": "Quest Global Engineering Services Private Limited",
+            "yearsActive": "June 2023 - Present",
+            "information": [
+                "Developing web application for real time monitoring of semiconductors",
+                "Creating new features, functionality and capabilities on these sites using React JS, HTML, CSS and Material UI",
+                "Performing bug fixes and code reviews"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Trainee Engineer",
+            "company": "Quest Global Engineering Services Private Limited",
+            "yearsActive": "June 2022 - June 2023",
+            "information": [
+                "Developing web application for real time monitoring of semiconductors"
+            ]
+        }
+    ]
+}

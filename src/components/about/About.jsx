@@ -6,7 +6,7 @@ import AboutBox from './AboutBox';
 
 const About = (props) => {
     const downloadResume = async () => {
-        window.open("farooq_basheer.pdf", '_blank');
+        window.open(props.resume, '_blank');
     }
 
 

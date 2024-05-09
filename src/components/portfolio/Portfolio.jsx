@@ -1,28 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Portfolio.css";
-
-import Menu from "./Menu";
 import { RiGithubLine, RiLink } from "react-icons/ri";
-
 import { motion } from "framer-motion";
 
-const Portfolio = () => {
-	const [items, setItems] = useState(Menu);
+const Portfolio = (props) => {
+	const {
+		projects
+	} = props;
+	const [items, setItems] = useState(projects);
 	const [activeFilter, setActiveFilter] = useState(0);
 	const filterItems = (categoryItem) => {
-		const updatedItems = Menu.filter((curElem) => {
+		const updatedItems = projects.filter((curElem) => {
 			return curElem.category.includes(categoryItem);
 		});
 
 		setItems(updatedItems);
 	};
 
+	useEffect(() => {
+		setItems(projects);
+	}, [projects])
+
 	return (
 		<section className="portfolio container section" id="portfolio">
 			<h2 className="section__title">Recent Projects</h2>
 
 			<div className="portfolio__filters">
-				<span className={activeFilter === 0 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { setItems(Menu); setActiveFilter(0) }}>
+				<span className={activeFilter === 0 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { setItems(projects); setActiveFilter(0) }}>
 					All
 				</span>
 				<span className={activeFilter === 1 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems("React JS"); setActiveFilter(1) }}>

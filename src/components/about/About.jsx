@@ -31,7 +31,7 @@ const About = (props) => {
                             <li>Python</li>
                             <li>Mongo DB</li>
                         </ul>
-                        <button className="btn" onClick={downloadResume}>Donwload CV</button>
+                        <button className="btn" onClick={downloadResume}>Download CV</button>
                     </div>
                 </div>
             </div>

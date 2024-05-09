@@ -63,8 +63,8 @@
   font-size: var(--small-font-size);
   display: inline-block;
   padding: 0.19rem 0.625rem;
-  transform: translateY(-40px);
   transition: 0.3s;
+  display: none;
 }
 
 .portfolio__title {
@@ -73,7 +73,7 @@
   margin: 0 0 0.98rem;
   padding: 0 1.25rem;
   position: absolute;
-  top: 3.75rem;
+  top: 2.8rem;
   transform: translateY(30px);
   transition: 0.3s;
   opacity: 0;
@@ -123,7 +123,7 @@
 .portfolio__card:hover .portfolio__title,
 .portfolio__card:hover .portfolio__category {
   opacity: 1;
-  transform: translateY(0);
+  display: block;
 }
 
 @media screen and (max-width: 1024px) {

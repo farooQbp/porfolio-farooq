@@ -28,7 +28,7 @@
     "projects": [
         {
             "id": 1,
-            "image": "https://www.denofgeek.com/wp-content/uploads/2022/05/Leged-of-Zelda-Link.jpg",
+            "image": "https://github.com/farooQbp/porfolio-farooq/raw/master/src/assets/mechktu.png",
             "title": "React Native App",
             "category": ["React Native", "Material UI", "Mobx"],
             "url":"https://play.google.com/store/apps/details?id=com.ktuassist.mech",

@@ -12,6 +12,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import TabTitleChanger from './utils/tabtitlechanger';
 import Academics from './components/academics/Academics';
+import ChatAssistant from './components/chatingassistant';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                 <Contact theme={theme} />
             </main>
             <TabTitleChanger />
+            <ChatAssistant />
         </div>
     );
 }
